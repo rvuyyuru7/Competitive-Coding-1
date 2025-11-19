@@ -18,18 +18,20 @@ class Solution {
                 left = mid + 1;
             }
         }
-        return left + 1; // left pointer always stops one index before the missing number
+        // Left pointer always stops at the index where missing number should be.
+        // Number at the index should be index + 1.
+        return left + 1; 
     }
 
     public static void main(String[] args) {
         Solution ob = new Solution();
         int[] arr = new int[] {1, 2, 3, 5, 6, 7, 8};
-        System.out.println(ob.search(arr));
+        System.out.println(ob.search(arr)); // returns 4
         int[] arr1 = new int[] {1, 2, 4, 5, 6, 7, 8, 9};
-        System.out.println(ob.search(arr1));
+        System.out.println(ob.search(arr1)); // retuns 3
         int[] arr3 = new int[] {2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(ob.search(arr3));
+        System.out.println(ob.search(arr3)); // returns 1
         int[] arr4 = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
-        System.out.println(ob.search(arr4));
+        System.out.println(ob.search(arr4)); // returns 9
     }
 }
